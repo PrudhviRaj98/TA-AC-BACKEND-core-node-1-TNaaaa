@@ -1,9 +1,9 @@
-let fs = require('fs');
-fs.readFile('./index.md', (err, content) => {
+let { readFile, readFileSync } = require('fs');
+readFile('./index.md', (err, content) => {
   console.log(content);
 });
 
-fs.readFileSync('./index.md', (err, content) => {
+readFileSync('./index.md', 'utf8', (err, content) => {
   console.log(content);
 });
 
